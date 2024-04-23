@@ -9,6 +9,12 @@ type Book struct {
 
 func changeTitle(book *Book) {
 	book.title = "New Title"
+	// (*book).title = "New Title"
+}
+
+func (b *Book) changeAuthor() {
+	b.author = "New Author"
+	// (*book).author = "New Author"
 }
 
 func change(s []int) {
@@ -46,4 +52,11 @@ func main() {
 	changeTitle(book_ptr)
 	fmt.Println("book: ", book, "book_ptr: ", book_ptr)
 
+	book.changeAuthor()
+	fmt.Println("book: ", book, "book_ptr: ", book_ptr)
+
+	p1 := 0
+	p2 := 1
+	p_slice := []*int{&p1, &p2}
+	fmt.Println("p_slice: ", p_slice)
 }

@@ -58,7 +58,6 @@ func main() {
 	for i := 0; i < 10; i++ {
 		fmt.Println("pos(i) = ", pos(i), "neg(-i) = ", neg(-2*i))
 	}
-
 	myFunc := func(s string) string {
 		return "Hello, " + s
 	}

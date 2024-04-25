@@ -29,6 +29,8 @@ func main() {
 		fmt.Println("c is h")
 	case 'a', 'b', 'c':
 		fmt.Println("c is a")
+	case 'x', 'y', 'z':
+		fmt.Println("c is x")
 	default:
 		fmt.Println("default case")
 	}
